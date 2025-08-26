@@ -53,7 +53,7 @@ export default function Home() {
           {/* Right */}
           <div className="flex-1 mt-10 md:mt-0 flex justify-center">
             <img
-              src="/images/hero-illustration.svg"
+              src="/images/hero.svg"
               alt="Abujas engineering & maintenance marketplace"
               className="max-w-full h-auto rounded-lg shadow-xl"
             />
