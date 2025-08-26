@@ -18,7 +18,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 text-2xl font-bold text-green-700">
           <Hammer className="text-green-700" size={28} />
-          Abujas
+          Abujas Construction and Services Company Ltd
         </Link>
 
         {/* Desktop Links with separators */}
