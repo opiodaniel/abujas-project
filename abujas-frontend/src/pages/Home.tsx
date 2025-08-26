@@ -4,8 +4,10 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Services from "../components/Services";
 import RecentProjects from "../components/RecentProjects";
+import WhyChooseUs from "../components/WhyChooseUs";
 
 export default function Home() {
+
   return (
     <section className="text-gray-900 font-sans">
       <Navbar />
@@ -262,58 +264,12 @@ export default function Home() {
         </div>
       </section>
 
-
-      {/* Partners Section */}
-      <section id="partners" className="py-16 bg-gray-50 px-6">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-          Our Trusted Partners
-        </h2>
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-          {[
-            "https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png",
-            "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
-            "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg",
-            "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
-          ].map((logo, idx) => (
-            <img
-              key={idx}
-              src={logo}
-              alt="Partner logo"
-              className="h-12 mx-auto grayscale hover:grayscale-0 transition"
-            />
-          ))}
-        </div>
-      </section>
-
       {/* About Section */}
-      <section id="about" className="bg-green-50 py-16 px-6">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center">
-          <div>
-            <h2 className="text-3xl font-bold mb-4 text-gray-800">
-              Why Choose Abujas?
-            </h2>
-            <p className="text-gray-600 mb-4">
-              Abujas is more than just a platform — it’s your trusted partner in
-              all things engineering. We bring together qualified professionals,
-              transparent pricing, and reliable service.
-            </p>
-            <ul className="space-y-2 text-gray-700">
-              <li>✔ Skilled and verified experts</li>
-              <li>✔ Easy booking process</li>
-              <li>✔ Affordable and transparent pricing</li>
-            </ul>
-          </div>
-          <img
-            src="https://images.unsplash.com/photo-1581090700227-4c4d3f09c7b6?auto=format&fit=crop&w=800&q=80"
-            alt="Construction workers"
-            className="rounded-xl shadow"
-          />
-        </div>
-      </section>
+      <WhyChooseUs />
 
 
       {/* CONTACT */}
-      <section className="py-16 bg-white" id="#contact">
+      <section className="py-16 bg-green-50" id="#contact">
         <div className="container mx-auto px-6 lg:px-12">
           {/* Center content and limit max width */}
           <div className="max-w-5xl mx-auto">
@@ -461,6 +417,28 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Partners Section */}
+      <section id="partners" className="py-16 bg-green-50 px-6">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
+          Our Trusted Partners
+        </h2>
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+          {[
+            "https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png",
+            "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+            "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg",
+            "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
+          ].map((logo, idx) => (
+            <img
+              key={idx}
+              src={logo}
+              alt="Partner logo"
+              className="h-12 mx-auto grayscale hover:grayscale-0 transition"
+            />
+          ))}
         </div>
       </section>
 

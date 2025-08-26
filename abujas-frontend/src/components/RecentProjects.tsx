@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const RecentProjects = () => {
   // Sample project data
   const projects = [
@@ -5,39 +7,57 @@ const RecentProjects = () => {
       id: 1,
       title: "Eco-Friendly Housing",
       image: "1.jpg",
-      status: "completed", // "completed" or "ongoing"
+      category: "completed",
     },
     {
       id: 2,
       title: "Urban Park Renovation",
       image: "2.jpg",
-      status: "ongoing",
+      category: "ongoing",
     },
     {
       id: 3,
       title: "Community Center",
       image: "3.jpg",
-      status: "completed",
+      category: "completed",
     },
     {
       id: 4,
       title: "Green Energy Initiative",
       image: "4.jpg",
-      status: "ongoing",
+      category: "ongoing",
     },
     {
       id: 5,
       title: "Sustainable School",
       image: "5.jpg",
-      status: "completed",
+      category: "completed",
     },
     {
       id: 6,
       title: "Water Conservation Project",
       image: "6.jpg",
-      status: "ongoing",
+      category: "ongoing",
+    },
+    {
+      id: 7,
+      title: "Modern Office Space",
+      image: "https://via.placeholder.com/400x300?text=Project+7",
+      category: "completed",
+    },
+    {
+      id: 8,
+      title: "Smart City Infrastructure",
+      image: "https://via.placeholder.com/400x300?text=Project+8",
+      category: "ongoing",
     },
   ];
+
+  const [activeFilter, setActiveFilter] = useState("all");
+
+  const filteredProjects = activeFilter === "all"
+    ? projects
+    : projects.filter(project => project.category === activeFilter);
 
   return (
     <section id="projects" className="py-20 px-6 bg-gray-50">
@@ -46,48 +66,86 @@ const RecentProjects = () => {
         <p className="text-gray-600 mt-2">Explore our completed and ongoing initiatives</p>
       </div>
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project) => (
+      {/* Filter Tabs */}
+      <div className="flex justify-center mb-8 space-x-2">
+        <button
+          onClick={() => setActiveFilter("all")}
+          className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+            activeFilter === "all"
+              ? "bg-green-600 text-white"
+              : "bg-white text-gray-700 hover:bg-gray-100"
+          }`}
+        >
+          All
+        </button>
+        <button
+          onClick={() => setActiveFilter("completed")}
+          className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+            activeFilter === "completed"
+              ? "bg-green-600 text-white"
+              : "bg-white text-gray-700 hover:bg-gray-100"
+          }`}
+        >
+          Completed
+        </button>
+        <button
+          onClick={() => setActiveFilter("ongoing")}
+          className={`px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+            activeFilter === "ongoing"
+              ? "bg-yellow-500 text-white"
+              : "bg-white text-gray-700 hover:bg-gray-100"
+          }`}
+        >
+          Ongoing
+        </button>
+      </div>
+
+      {/* Projects Grid */}
+      <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {filteredProjects.map((project) => (
           <div
             key={project.id}
-            className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow duration-300 group"
+            className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 group"
           >
             {/* Project Image */}
             <div className="relative overflow-hidden">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-56 object-cover group-hover:scale-105 transition-transform duration-300"
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
               />
               
               {/* Status Badge */}
               <div
-                className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-semibold text-white capitalize ${
-                  project.status === 'completed'
+                className={`absolute top-4 right-4 px-2 py-1 rounded-full text-xs font-semibold text-white capitalize ${
+                  project.category === 'completed'
                     ? 'bg-green-600'
                     : 'bg-yellow-500'
                 }`}
               >
-                {project.status}
+                {project.category}
               </div>
             </div>
 
             {/* Project Info */}
-            <div className="p-5">
-              <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                {project.title}
-              </h3>
-              
-              {/* Optional: Add a short description or action */}
-              <p className="text-gray-600 text-sm">
-                {project.status === 'completed'
-                  ? 'Completed in 2024'
-                  : 'Expected completion: 2025'}
+            <div className="p-4">
+              <h3 className="text-lg font-semibold text-gray-900">{project.title}</h3>
+              <p className="text-gray-600 text-sm mt-1">
+                {project.category === 'completed'
+                  ? 'Completed • 2024'
+                  : 'In Progress • Expected 2025'}
               </p>
             </div>
           </div>
         ))}
       </div>
+
+      {/* Empty State */}
+      {filteredProjects.length === 0 && (
+        <div className="text-center py-12">
+          <p className="text-gray-500">No projects found for this category.</p>
+        </div>
+      )}
     </section>
   );
 };
