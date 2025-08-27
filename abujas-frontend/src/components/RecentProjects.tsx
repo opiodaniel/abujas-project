@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 const RecentProjects = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
+
+  interface Project {
+    id: number;
+    title: string;
+    image: string;
+    category: "completed" | "ongoing"; // ← Literal types
+    description: string;
+  }
+
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [activeFilter, setActiveFilter] = useState('all');
 
-  const projects = [
+  const projects: Project[] = [
     {
       id: 1,
       title: 'Eco-Friendly Housing',
@@ -53,7 +62,7 @@ const RecentProjects = () => {
     ? projects
     : projects.filter(project => project.category === activeFilter);
 
-  const openModal = (project) => {
+  const openModal = (project:Project) => {
     setSelectedProject(project);
   };
 

@@ -1,5 +1,4 @@
-// src/pages/Home.tsx
-import { Hammer, BadgeDollarSign, CalendarCheck, Building, Droplets, Plug, Wrench } from "lucide-react";
+import { Hammer, BadgeDollarSign, CalendarCheck} from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Services from "../components/Services";
@@ -202,24 +201,8 @@ export default function Home() {
 
         </div>
       </section>
- 
-
-
-      {/* Portfolio / Projects Preview */}
 
       <RecentProjects />
-
-
-      {/* <section id="projects" className="py-20 px-6 bg-gray-50">
-        <div className="max-w-7xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-bold">Recent Projects</h2>
-        </div>
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-          <img src="1.jpg" alt="Project 1" className="rounded-lg shadow-md" />
-          <img src="2.jpg" alt="Project 2" className="rounded-lg shadow-md" />
-          <img src="3.jpg" alt="Project 3" className="rounded-lg shadow-md" />
-        </div>
-      </section> */}
 
 
       {/* Testimonials Section */}
@@ -400,7 +383,7 @@ export default function Home() {
                   <div>
                     <textarea
                       placeholder="Your message"
-                      rows="4"
+                      rows={4}
                       className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent transition-all duration-200 resize-none"
                     ></textarea>
                   </div>
