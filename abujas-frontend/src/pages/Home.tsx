@@ -79,12 +79,9 @@ export default function Home() {
             </p>
           </div>
           <div className="shrink-0">
-            <Link
-              to="/how-it-works"
-              className="bg-white text-emerald-700 hover:bg-emerald-100 font-bold py-2 px-4 rounded-full text-sm transition shadow-md hover:shadow-lg"
-            >
-              Learn How Abujas Works
-            </Link>
+            <a href="#how-it-works" className="bg-white text-emerald-700 hover:bg-emerald-100 font-bold py-2 px-4 rounded-full text-sm transition shadow-md hover:shadow-lg">
+                Learn How Abujas Works
+            </a>            
           </div>
         </div>
       </div>
@@ -269,7 +266,7 @@ export default function Home() {
 
 
       {/* CONTACT */}
-      <section className="py-16 bg-green-50" id="#contact">
+      <section className="py-16 bg-green-50" id="contact">
         <div className="container mx-auto px-6 lg:px-12">
           {/* Center content and limit max width */}
           <div className="max-w-5xl mx-auto">
