@@ -71,9 +71,9 @@ const RecentProjects = () => {
   };
 
   return (
-    <section id="projects" className="py-20 px-6 bg-gray-50">
+    <section id="projects" className="py-5 px-6 bg-gray-50">
       {/* Section Header */}
-      <div className="max-w-7xl mx-auto text-center mb-12">
+      <div className="max-w-7xl mx-auto text-center mb-10">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Recent Projects</h2>
         <p className="text-gray-600">Explore our completed and ongoing initiatives</p>
       </div>

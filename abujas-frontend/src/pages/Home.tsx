@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import Services from "../components/Services";
 import RecentProjects from "../components/RecentProjects";
 import WhyChooseUs from "../components/WhyChooseUs";
+import TeamSection from "../components/TeamSection";
 
 export default function Home() {
 
@@ -246,7 +247,8 @@ export default function Home() {
 
       {/* About Section */}
       <WhyChooseUs />
-
+      
+      <TeamSection />
 
       {/* CONTACT */}
       <section className="py-16 bg-green-50" id="contact">
