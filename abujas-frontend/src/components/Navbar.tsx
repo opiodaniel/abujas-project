@@ -12,8 +12,7 @@ export default function Navbar() {
     { label: "Contact", href: "#contact" },
   ];
 
-  // Replace with your actual WhatsApp number (with country code)
-  const whatsappNumber = "+256781218116";
+  const whatsappNumber = "+256791880099";
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hello Abujas Construction, I'd like to discuss a project.`;
 
   return (
