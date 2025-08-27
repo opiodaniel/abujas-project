@@ -87,7 +87,7 @@ const TeamSection = () => {
   };
 
   return (
-    <section id="team" className="py-16 px-6 bg-white">
+    <section id="team" className="py-5 px-6 bg-white">
       {/* Header with Animation */}
       <div className="max-w-5xl mx-auto text-center mb-12" data-aos="fade-up">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Leadership Team</h2>
