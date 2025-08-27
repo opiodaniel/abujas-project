@@ -1,21 +1,11 @@
+// vite.config.ts
 import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react'; // ← Required for React
-import { resolve } from 'path';
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-  plugins: [
-    react(), // ✅ This is required to handle JSX and React Fast Refresh
-    // Optional: If you want to inline Tailwind plugin
-  ],
+  plugins: [react()],
   build: {
-    outDir: 'dist', // ✅ Ensures output goes to /dist
-    emptyOutDir: true,
+    outDir: 'dist',
   },
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src'), // ✅ Helpful alias
-    },
-  },
-  // Optional: Set base if deploying to subpath
   base: '/',
 });
