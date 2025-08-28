@@ -463,7 +463,7 @@ export default function Home() {
           <div>
             <h3 className="font-semibold mb-4">Contact</h3>
             <p className="text-green-100 text-sm mb-2">123 Abujas Street, Kampala, Uganda</p>
-            <p className="text-green-100 text-sm mb-2">+256 700 123 456</p>
+            <p className="text-green-100 text-sm mb-2">+256 781 218 116</p>
             <p className="text-green-100 text-sm">info@abujas.com</p>
           </div>
           

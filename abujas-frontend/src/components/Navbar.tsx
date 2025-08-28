@@ -19,10 +19,23 @@ export default function Navbar() {
     <nav className="bg-white shadow sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 text-2xl font-bold text-green-700">
-          <Hammer className="text-green-700" size={28} />
-          Abujas Construction and Services Company Ltd
+        <div className="flex items-center space-x-2">
+        {/* Show logo only on mobile */}
+        <Link to="/" className="flex items-center gap-2">
+          <img
+            src="/logo.png"
+            alt="Abujas Logo"
+            className="w-18 h-18 block md:hidden"
+          />
         </Link>
+        {/* Show company name on medium+ screens */}
+        <Link to="/" className="flex items-center gap-2">
+          <h1 className="hidden md:block text-xl font-bold text-green-700">
+          <Hammer className="text-green-700" size={28} />
+            Abujas Construction and Services Company Ltd.
+          </h1>
+        </Link>
+      </div>      
 
         {/* Desktop Links with separators */}
         <ul className="hidden md:flex items-center gap-3 font-medium text-gray-700">
