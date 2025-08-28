@@ -59,7 +59,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-white">
+    <section className="py-20 px-6 bg-red-50">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12 max-w-3xl mx-auto">
@@ -74,10 +74,10 @@ const WhyChooseUs = () => {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 group"
+              className="bg-white p-6 rounded-lg shadow-sm hover:shadow-lg transition-all duration-300 group border border-red-100"
             >
               {/* Icon */}
-              <div className="w-12 h-12 bg-green-600 text-white rounded-lg flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-200">
+              <div className="w-12 h-12 bg-red-900 text-white rounded-lg flex items-center justify-center mb-4 group-hover:scale-105 group-hover:bg-red-800 transition-all duration-200">
                 {feature.icon}
               </div>
 

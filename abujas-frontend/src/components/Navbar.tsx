@@ -20,22 +20,22 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-        {/* Show logo only on mobile */}
-        <Link to="/" className="flex items-center gap-2">
-          <img
-            src="/logo.png"
-            alt="Abujas Logo"
-            className="w-18 h-18 block md:hidden"
-          />
-        </Link>
-        {/* Show company name on medium+ screens */}
-        <Link to="/" className="flex items-center gap-2">
-          <h1 className="hidden md:block text-xl font-bold text-green-700">
-          <Hammer className="text-green-700" size={28} />
-            Abujas Construction and Services Company Ltd.
-          </h1>
-        </Link>
-      </div>      
+          {/* Show logo only on mobile */}
+          <Link to="/" className="flex items-center gap-2">
+            <img
+              src="abujas-logo.png"
+              alt="Abujas Logo"
+              className="w-18 h-18 block md:hidden"
+            />
+          </Link>
+          {/* Show company name on medium+ screens */}
+          <Link to="/" className="flex items-center gap-2">
+            <h1 className="hidden md:block text-xl font-bold text-red-900">
+              <Hammer className="text-red-900" size={28} />
+              Abujas Construction and Services Company Ltd.
+            </h1>
+          </Link>
+        </div>
 
         {/* Desktop Links with separators */}
         <ul className="hidden md:flex items-center gap-3 font-medium text-gray-700">
@@ -43,7 +43,7 @@ export default function Navbar() {
             <li key={link.label} className="flex items-center">
               <a
                 href={link.href}
-                className="px-2 py-2 hover:text-green-700 transition"
+                className="px-2 py-2 hover:text-red-900 transition-colors duration-200"
               >
                 {link.label}
               </a>
@@ -61,7 +61,7 @@ export default function Navbar() {
             href={whatsappLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-all duration-200 shadow-sm"
+            className="hidden md:flex items-center gap-2 bg-red-900 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition-all duration-200 shadow-sm"
             aria-label="Chat on WhatsApp"
           >
             <svg
@@ -78,7 +78,7 @@ export default function Navbar() {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-gray-600 hover:text-green-700 p-2 rounded"
+            className="md:hidden text-gray-600 hover:text-red-900 p-2 rounded"
             aria-label="Toggle menu"
           >
             {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -88,12 +88,12 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="md:hidden px-4 py-4 space-y-3">
+        <ul className="md:hidden bg-white border-t border-red-100 px-4 py-4 space-y-3">
           {navLinks.map((link) => (
             <li key={link.label}>
               <a
                 href={link.href}
-                className="block p-2 rounded hover:text-green-700 transition"
+                className="block p-2 rounded hover:text-red-900 transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
@@ -107,7 +107,7 @@ export default function Navbar() {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-all duration-200"
+              className="flex items-center justify-center gap-2 w-full bg-red-900 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition-all duration-200"
               aria-label="Chat on WhatsApp"
             >
               <svg

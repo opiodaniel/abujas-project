@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 // Define TypeScript interfaces
-    interface SocialLinks {
-    linkedin?: string;
-    twitter?: string;
-    whatsapp?: string;
-    instagram?: string;
-    email?: string;
-    phone?: string;
-    }
+interface SocialLinks {
+  linkedin?: string;
+  twitter?: string;
+  whatsapp?: string;
+  instagram?: string;
+  email?: string;
+  phone?: string;
+}
 
-    interface Manager {
-    id: number;
-    name: string;
-    role: string;
-    image: string;
-    bio: string;
-    details: string;
-    social: SocialLinks;
-    }
+interface Manager {
+  id: number;
+  name: string;
+  role: string;
+  image: string;
+  bio: string;
+  details: string;
+  social: SocialLinks;
+}
 
 const TeamSection = () => {
   const [selectedManager, setSelectedManager] = useState<Manager | null>(null);
@@ -88,7 +88,7 @@ const TeamSection = () => {
 
   return (
     <section id="team" className="py-5 px-6 bg-white">
-      {/* Header with Animation */}
+      {/* Header */}
       <div className="max-w-5xl mx-auto text-center mb-12" data-aos="fade-up">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Leadership Team</h2>
         <p className="text-gray-600">
@@ -131,7 +131,7 @@ const TeamSection = () => {
                       href={manager.social.linkedin}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-8 h-8 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:bg-green-100 transition-colors"
+                      className="w-8 h-8 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:bg-red-100 transition-colors"
                       aria-label="LinkedIn"
                     >
                       <svg className="w-4 h-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
@@ -144,7 +144,7 @@ const TeamSection = () => {
                       href={manager.social.twitter}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-8 h-8 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:bg-green-100 transition-colors"
+                      className="w-8 h-8 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:bg-red-100 transition-colors"
                       aria-label="Twitter"
                     >
                       <svg className="w-4 h-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
@@ -157,7 +157,7 @@ const TeamSection = () => {
                       href={manager.social.whatsapp}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-8 h-8 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:bg-green-100 transition-colors"
+                      className="w-8 h-8 bg-white bg-opacity-90 rounded-full flex items-center justify-center hover:bg-red-100 transition-colors"
                       aria-label="WhatsApp"
                     >
                       <svg className="w-4 h-4 text-gray-700" fill="currentColor" viewBox="0 0 24 24">
@@ -171,7 +171,7 @@ const TeamSection = () => {
               {/* Info */}
               <div className="p-5">
                 <h3 className="text-lg font-semibold text-gray-900">{manager.name}</h3>
-                <p className="text-green-600 font-medium text-sm">{manager.role}</p>
+                <p className="text-red-700 font-medium text-sm">{manager.role}</p>
               </div>
             </div>
           ))}
@@ -195,7 +195,7 @@ const TeamSection = () => {
             />
             <div className="p-6 text-center">
               <h3 className="text-2xl font-bold text-gray-900">{selectedManager.name}</h3>
-              <p className="text-green-600 font-medium mb-3">{selectedManager.role}</p>
+              <p className="text-red-700 font-medium mb-3">{selectedManager.role}</p>
               <p className="text-gray-600 mb-4">{selectedManager.details}</p>
 
               {/* Social Icons in Modal */}
@@ -205,7 +205,7 @@ const TeamSection = () => {
                     href={selectedManager.social.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-green-600 transition-colors"
+                    className="text-gray-600 hover:text-red-700 transition-colors"
                     aria-label="LinkedIn"
                   >
                     <i className="fab fa-linkedin-in"></i>
@@ -216,7 +216,7 @@ const TeamSection = () => {
                     href={selectedManager.social.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-green-600 transition-colors"
+                    className="text-gray-600 hover:text-red-700 transition-colors"
                     aria-label="WhatsApp"
                   >
                     <i className="fab fa-whatsapp"></i>
@@ -227,7 +227,7 @@ const TeamSection = () => {
                     href={selectedManager.social.twitter}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-600 hover:text-green-600 transition-colors"
+                    className="text-gray-600 hover:text-red-700 transition-colors"
                     aria-label="Twitter"
                   >
                     <i className="fab fa-twitter"></i>
@@ -237,7 +237,7 @@ const TeamSection = () => {
 
               <button
                 onClick={closeModal}
-                className="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors duration-200"
+                className="bg-red-700 text-white px-6 py-2 rounded-lg hover:bg-red-800 transition-colors duration-200"
               >
                 Close
               </button>

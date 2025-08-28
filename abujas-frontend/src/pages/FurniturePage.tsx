@@ -1,4 +1,4 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 
@@ -84,11 +84,12 @@ const FurniturePage = () => {
   return (
     <>
       <Navbar />
-      {/* COMPACT HERO */}
-      <section id="hero" className="relative bg-green-700 text-white py-8 overflow-hidden">
+
+      {/* COMPACT HERO - Updated to Red */}
+      <section id="hero" className="relative bg-red-900 text-white py-8 overflow-hidden">
         {/* Background Decorations */}
-        <div className="absolute -right-20 -top-20 w-80 h-80 bg-green-500 rounded-full opacity-20" />
-        <div className="absolute -left-16 bottom-0 w-64 h-64 bg-emerald-600 rounded-full opacity-20" />
+        <div className="absolute -right-20 -top-20 w-80 h-80 bg-red-700 rounded-full opacity-20" />
+        <div className="absolute -left-16 bottom-0 w-64 h-64 bg-red-800 rounded-full opacity-20" />
 
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center">
           {/* Left */}
@@ -96,24 +97,24 @@ const FurniturePage = () => {
             <h1 className="text-3xl md:text-4xl font-extrabold mb-2">
               Quality Furniture. <br /> Built to Last.
             </h1>
-            <p className="text-sm md:text-base mb-4 text-green-100 max-w-md mx-auto md:mx-0">
+            <p className="text-sm md:text-base mb-4 text-red-100 max-w-md mx-auto md:mx-0">
               Handcrafted wooden furniture for your home or office — from beds to custom cupboards.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
               <Link
-                to="/hire"
-                className="bg-white text-green-700 text-sm px-5 py-2 rounded-lg font-semibold hover:bg-green-100 transition shadow"
+                to="#"
+                className="bg-white text-red-900 text-sm px-5 py-2 rounded-lg font-semibold hover:bg-red-50 transition shadow"
               >
                 Book a Carpenter
               </Link>
               <Link
                 to="/furniture"
-                className="bg-green-500 text-white text-sm px-5 py-2 rounded-lg font-semibold hover:bg-green-600 transition shadow"
+                className="bg-red-800 text-white text-sm px-5 py-2 rounded-lg font-semibold hover:bg-red-700 transition shadow"
               >
                 Browse Furniture
               </Link>
             </div>
-            <p className="text-green-100 text-xs mt-3">
+            <p className="text-red-100 text-xs mt-3">
               Tables · Beds · Sofas · Cupboards · Desks · Custom
             </p>
           </div>
@@ -129,19 +130,22 @@ const FurniturePage = () => {
         </div>
       </section>
 
-      {/* COMPACT ABOUT STRIP */}
-      <div id="about" className="bg-emerald-600 px-6 py-4">
+      {/* COMPACT ABOUT STRIP - Red */}
+      <div id="about" className="bg-red-800 px-6 py-4">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4 text-center md:text-left">
           <div>
             <h2 className="text-lg md:text-xl font-bold text-white">
               From Concept to Craftsmanship
             </h2>
-            <p className="text-emerald-100 text-xs md:text-sm">
+            <p className="text-red-100 text-xs md:text-sm">
               Custom or ready-made, Abujas delivers durable, stylish furniture.
             </p>
           </div>
           <div className="shrink-0">
-            <a href="#furniture" className="bg-white text-emerald-700 text-xs font-bold py-1.5 px-3 rounded-full hover:bg-emerald-100 transition shadow-sm">
+            <a
+              href="#furniture"
+              className="bg-white text-red-800 text-xs font-bold py-1.5 px-3 rounded-full hover:bg-red-100 transition shadow-sm"
+            >
               Explore Collection
             </a>
           </div>
@@ -149,7 +153,7 @@ const FurniturePage = () => {
       </div>
 
       {/* FURNITURE GRID */}
-      <section id="furniture" className="py-12 px-6 bg-white">
+      <section id="furniture" className="py-12 px-6 bg-red-50">
         {/* Header */}
         <div className="max-w-6xl mx-auto text-center mb-8">
           <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Shop Furniture</h1>
@@ -167,8 +171,8 @@ const FurniturePage = () => {
               className={`px-3 py-1.5 rounded-full text-xs font-medium capitalize transition-all duration-300 shadow-sm
                 ${
                   activeFilter === key
-                    ? 'bg-green-600 text-white'
-                    : 'bg-white text-gray-700 hover:bg-green-50 hover:text-green-700'
+                    ? 'bg-red-700 text-white'
+                    : 'bg-white text-gray-700 hover:bg-red-50 hover:text-red-700'
                 }
               `}
             >
@@ -182,7 +186,7 @@ const FurniturePage = () => {
           {filteredFurniture.map((item) => (
             <div
               key={item.id}
-              className="group bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
+              className="group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 border border-red-100"
             >
               <div className="relative aspect-video overflow-hidden">
                 <img
@@ -191,7 +195,7 @@ const FurniturePage = () => {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute top-2 left-2">
-                  <span className="px-1.5 py-0.5 bg-green-600 text-white text-xs rounded-full">
+                  <span className="px-1.5 py-0.5 bg-red-700 text-white text-xs rounded-full">
                     {item.category}
                   </span>
                 </div>
@@ -200,11 +204,11 @@ const FurniturePage = () => {
               <div className="p-4">
                 <h3 className="text-lg font-semibold text-gray-900 mb-1">{item.name}</h3>
                 <p className="text-gray-600 text-xs mb-2 line-clamp-2">{item.description}</p>
-                <p className="text-green-600 font-bold text-sm mb-3">{item.price}</p>
+                <p className="text-red-700 font-bold text-sm mb-3">{item.price}</p>
 
                 <button
                   onClick={() => alert(`Thank you! We'll contact you about: ${item.name}`)}
-                  className="w-full bg-green-600 hover:bg-green-700 text-white py-2 rounded-lg text-sm font-medium transition-colors"
+                  className="w-full bg-red-700 hover:bg-red-800 text-white py-2 rounded-lg text-sm font-medium transition-colors"
                 >
                   Request Quote
                 </button>
@@ -214,14 +218,14 @@ const FurniturePage = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="max-w-xs mx-auto text-center mt-10 bg-green-50 p-5 rounded-lg">
+        <div className="max-w-xs mx-auto text-center mt-10 bg-white p-5 rounded-lg shadow">
           <h2 className="text-xl font-bold text-gray-900 mb-2">Custom Furniture?</h2>
           <p className="text-gray-600 text-sm mb-4">
             We build pieces to fit your space and style.
           </p>
           <Link
-            to="/hire"
-            className="inline-block bg-green-600 text-white text-sm px-4 py-2 rounded-lg font-semibold hover:bg-green-700 transition"
+            to="#"
+            className="inline-block bg-red-700 text-white text-sm px-4 py-2 rounded-lg font-semibold hover:bg-red-800 transition"
           >
             Request Custom Piece
           </Link>

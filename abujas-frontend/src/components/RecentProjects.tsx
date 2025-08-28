@@ -55,8 +55,7 @@ const RecentProjects = () => {
       category: 'ongoing',
       description: 'Workshop build of white vanity units with drawers; sanding and finishing in progress.',
     },
-  ];  
-  
+  ];
 
   const filteredProjects = activeFilter === 'all'
     ? projects
@@ -71,7 +70,7 @@ const RecentProjects = () => {
   };
 
   return (
-    <section id="projects" className="py-5 px-6 bg-gray-50">
+    <section id="projects" className="py-5 px-6 bg-white">
       {/* Header */}
       <div className="max-w-7xl mx-auto text-center mb-10">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Recent Projects</h2>
@@ -87,8 +86,8 @@ const RecentProjects = () => {
             className={`px-5 py-2.5 rounded-full text-sm font-medium capitalize transition-all duration-300 shadow-sm
               ${
                 activeFilter === filter
-                  ? 'bg-green-600 text-white shadow-green-200'
-                  : 'bg-white text-gray-700 hover:bg-green-50 hover:text-green-700'
+                  ? 'bg-red-700 text-white shadow-red-200'
+                  : 'bg-white text-gray-700 hover:bg-red-50 hover:text-red-700'
               }
             `}
           >
@@ -123,7 +122,7 @@ const RecentProjects = () => {
                   e.stopPropagation();
                   openModal(project);
                 }}
-                className="inline-flex items-center gap-1.5 bg-green-600 hover:bg-green-700 px-3 py-1.5 rounded text-xs font-medium cursor-pointer"
+                className="inline-flex items-center gap-1.5 bg-red-700 hover:bg-red-800 px-3 py-1.5 rounded text-xs font-medium cursor-pointer"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -167,7 +166,7 @@ const RecentProjects = () => {
             <h2 className="text-2xl font-bold text-gray-900">{selectedProject.title}</h2>
             <p className="text-gray-600 mt-2">{selectedProject.description}</p>
             <div className="mt-4 space-x-4">
-              <button className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors duration-200">
+              <button className="bg-red-700 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition-colors duration-200">
                 Contact Us
               </button>
               <button className="border border-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-100 transition-colors duration-200">
