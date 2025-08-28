@@ -15,48 +15,48 @@ const RecentProjects = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: 'Eco-Friendly Housing',
+      title: 'TV Wall & Entertainment Unit',
       image: '1.jpg',
       category: 'completed',
-      description: 'A sustainable residential complex built with eco-friendly materials and solar energy systems. Completed in 2024.',
+      description: 'Custom media wall with integrated shelving and concealed cable management in warm wood veneer.',
     },
     {
       id: 2,
-      title: 'Urban Park Renovation',
+      title: 'Wall Paneling & Mirror Console (Living Room)',
       image: '2.jpg',
       category: 'ongoing',
-      description: 'Modernizing public green spaces with accessible pathways, native plants, and community seating areas. Expected completion: Q3 2025.',
+      description: 'Geometric wall panels with a mirror console and plants—finishes and styling in progress.',
     },
     {
       id: 3,
-      title: 'Community Center',
+      title: 'Curved Lounge Chair — Custom Carpentry',
       image: '3.jpg',
       category: 'completed',
-      description: 'A multi-purpose facility for local events, meetings, and recreational activities. Fully equipped with modern amenities.',
+      description: 'Hand-crafted bent-wood chair upholstered in teal velvet; sculptural form with smooth edge profiling.',
     },
     {
       id: 4,
-      title: 'Green Energy Initiative',
+      title: 'Modular Kitchen & Storage Installation',
       image: '4.jpg',
       category: 'ongoing',
-      description: 'Installing solar panels and energy-efficient systems across municipal buildings to reduce carbon footprint.',
+      description: 'L-shaped cabinetry install; hardware fitting and countertop templating currently underway.',
     },
     {
       id: 5,
-      title: 'Sustainable School',
+      title: 'Residential Living Room Makeover',
       image: '5.jpg',
       category: 'completed',
-      description: 'An eco-conscious educational facility with natural lighting, rainwater harvesting, and green classrooms.',
+      description: 'Warm ambient lighting, blinds, accent furniture, and natural textures for a cozy family space.',
     },
     {
       id: 6,
-      title: 'Water Conservation Project',
+      title: 'Bathroom Vanity & Shelving Fabrication',
       image: '6.jpg',
       category: 'ongoing',
-      description: 'Implementing smart irrigation and water recycling systems for urban and agricultural use.',
+      description: 'Workshop build of white vanity units with drawers; sanding and finishing in progress.',
     },
-  ];
-
+  ];  
+  
 
   const filteredProjects = activeFilter === 'all'
     ? projects
