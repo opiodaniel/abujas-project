@@ -1,17 +1,16 @@
 import { useState } from 'react';
 
 const RecentProjects = () => {
-
   interface Project {
     id: number;
     title: string;
     image: string;
-    category: "completed" | "ongoing"; // ← Literal types
+    category: "completed" | "ongoing";
     description: string;
   }
 
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-  const [activeFilter, setActiveFilter] = useState('all');
+  const [activeFilter, setActiveFilter] = useState<'all' | 'completed' | 'ongoing'>('all');
 
   const projects: Project[] = [
     {
@@ -58,11 +57,12 @@ const RecentProjects = () => {
     },
   ];
 
+
   const filteredProjects = activeFilter === 'all'
     ? projects
-    : projects.filter(project => project.category === activeFilter);
+    : projects.filter((p) => p.category === activeFilter);
 
-  const openModal = (project:Project) => {
+  const openModal = (project: Project) => {
     setSelectedProject(project);
   };
 
@@ -72,7 +72,7 @@ const RecentProjects = () => {
 
   return (
     <section id="projects" className="py-5 px-6 bg-gray-50">
-      {/* Section Header */}
+      {/* Header */}
       <div className="max-w-7xl mx-auto text-center mb-10">
         <h2 className="text-3xl font-bold text-gray-900 mb-4">Recent Projects</h2>
         <p className="text-gray-600">Explore our completed and ongoing initiatives</p>
@@ -83,7 +83,7 @@ const RecentProjects = () => {
         {['all', 'completed', 'ongoing'].map((filter) => (
           <button
             key={filter}
-            onClick={() => setActiveFilter(filter)}
+            onClick={() => setActiveFilter(filter as any)}
             className={`px-5 py-2.5 rounded-full text-sm font-medium capitalize transition-all duration-300 shadow-sm
               ${
                 activeFilter === filter
@@ -102,28 +102,38 @@ const RecentProjects = () => {
         {filteredProjects.map((project) => (
           <div
             key={project.id}
-            className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 aspect-video"
+            className="group relative overflow-hidden rounded-xl shadow-md hover:shadow-xl transition-all duration-300 aspect-video cursor-pointer"
+            onClick={() => openModal(project)}
           >
+            {/* Image */}
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-opacity-0 group-hover:bg-opacity-40 transition-all duration-300 flex items-center justify-center p-6">
-              <div className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 text-center text-white">
-                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                <button
-                  onClick={() => openModal(project)}
-                  className="inline-flex items-center gap-1.5 bg-green-600 hover:bg-green-700 px-4 py-2 rounded-full text-sm font-medium transition-colors"
-                >
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                  </svg>
-                  <span>View Project</span>
-                </button>
-              </div>
+
+            {/* Gradient: Only at bottom (safe, never hides image) */}
+            <div className="absolute bottom-0 left-0 right-0 h-1/3 bg-gradient-to-t from-black/70 to-transparent pointer-events-none"></div>
+
+            {/* Content: Always visible on mobile, enhanced on desktop hover */}
+            <div className="absolute bottom-4 left-4 right-4 text-white">
+              <h3 className="text-lg font-semibold mb-1">{project.title}</h3>
+              <button
+                onClick={(e) => {
+                  e.stopPropagation();
+                  openModal(project);
+                }}
+                className="inline-flex items-center gap-1.5 bg-green-600 hover:bg-green-700 px-3 py-1.5 rounded text-xs font-medium transition-colors opacity-0 group-hover:opacity-100"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+                <span>View</span>
+              </button>
             </div>
+
+            {/* Status Badge */}
             <div
               className={`absolute top-4 left-4 px-3 py-1 rounded-full text-xs font-semibold text-white capitalize min-w-max
                 ${project.category === 'completed' ? 'bg-green-600' : 'bg-yellow-500'}
@@ -139,7 +149,6 @@ const RecentProjects = () => {
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 backdrop-blur-sm">
           <div className="bg-white rounded-lg max-w-2xl w-full mx-4 p-6 relative">
-            {/* Improved Close Button */}
             <button
               onClick={closeModal}
               className="absolute -top-2 -right-2 w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center text-gray-700 hover:text-gray-900 hover:scale-105 transition-all duration-200 focus:outline-none"
