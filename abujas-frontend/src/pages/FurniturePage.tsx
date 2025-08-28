@@ -102,7 +102,7 @@ const FurniturePage = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
               <Link
-                to="hire"
+                to="/hire"
                 className="bg-white text-red-900 text-sm px-5 py-2 rounded-lg font-semibold hover:bg-red-50 transition shadow"
               >
                 Book a Carpenter
@@ -224,7 +224,7 @@ const FurniturePage = () => {
             We build pieces to fit your space and style.
           </p>
           <Link
-            to="hire"
+            to="/hire"
             className="inline-block bg-red-700 text-white text-sm px-4 py-2 rounded-lg font-semibold hover:bg-red-800 transition"
           >
             Request Custom Piece
