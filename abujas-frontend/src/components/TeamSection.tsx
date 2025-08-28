@@ -76,6 +76,19 @@ const TeamSection = () => {
         whatsapp: "#",
       },
     },
+    {
+      id: 4,
+      name: "Innocent Aryono",
+      role: "Assistant Supervisor",
+      image: "img_5.jpg",
+      bio: "On-site lead ensuring quality, safety, and adherence to design standards.",
+      details: "Innocent is our field expert, ensuring every construction phase meets safety codes, quality benchmarks, and architectural plans.",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        whatsapp: "#",
+      },
+    },
   ];
 
   const openModal = (manager: Manager) => {

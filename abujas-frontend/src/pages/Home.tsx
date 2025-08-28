@@ -30,7 +30,7 @@ export default function Home() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link
-                to="#"
+                to="hire"
                 className="bg-white text-red-700 px-6 py-3 rounded-lg font-semibold hover:bg-red-50 transition shadow"
               >
                 Book a Service
