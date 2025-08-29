@@ -11,39 +11,40 @@ const services = [
     icon: <Wrench size={28} className="text-red-900" />,
     title: "Carpentry",
     desc: "Skilled carpenters for custom furniture, repairs, and woodwork designs.",
-    bg: "bg-red-50",
+    bg: "carpentry.jpg",
   },
   {
     icon: <Home size={28} className="text-red-900" />,
     title: "Construction",
     desc: "Professional builders for residential and commercial construction projects.",
-    bg: "bg-red-50",
+    bg: "construction.jpg",
   },
   {
     icon: <Hammer size={28} className="text-red-900" />,
     title: "Maintenance & Repairs",
     desc: "Quick, reliable repairs and routine maintenance for homes and businesses.",
-    bg: "bg-red-50",
+    bg: "maintenance.jpg",
   },
   {
     icon: <Zap size={28} className="text-red-900" />,
     title: "Electrical Services",
     desc: "Licensed electricians for installations, repairs, and safety checks.",
-    bg: "bg-red-50",
+    bg: "electrical.jpg",
   },
   {
     icon: <Droplet size={28} className="text-red-900" />,
     title: "Plumbing",
     desc: "From leaks to full installations — trusted plumbing solutions.",
-    bg: "bg-red-50",
+    bg: "plumbing.jpg",
   },
   {
     icon: <Ruler size={28} className="text-red-900" />,
     title: "Interior Design",
     desc: "Modern, functional interior designs tailored to your space and style.",
-    bg: "bg-red-50",
+    bg: "interior.jpg",
   },
 ];
+
 
 export default function ServiceSection() {
   return (
@@ -64,17 +65,26 @@ export default function ServiceSection() {
           }}
         >
           {services.map((service) => (
+
             <SwiperSlide key={service.title}>
-              <div
-                className={`p-6 rounded-2xl shadow-md text-left hover:shadow-xl transition-all duration-300 ${service.bg} border border-red-100`}
-              >
-                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow mb-4">
-                  {service.icon}
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{service.title}</h3>
-                <p className="text-gray-600 text-sm">{service.desc}</p>
-              </div>
-            </SwiperSlide>
+  <div
+    className="relative h-80 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-red-100 bg-cover bg-center"
+    style={{ backgroundImage: `url(${service.bg})` }}
+  >
+    {/* Bottom panel for text */}
+    <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-6">
+      <div className="flex items-center gap-3 mb-2">
+        <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white">
+          {service.icon}
+        </div>
+        <h3 className="text-xl font-semibold">{service.title}</h3>
+      </div>
+      <p className="text-sm opacity-90">{service.desc}</p>
+    </div>
+  </div>
+</SwiperSlide>
+
+          
           ))}
         </Swiper>
       </div>
