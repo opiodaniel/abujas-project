@@ -192,8 +192,7 @@ const TeamSection = () => {
                     )}
                   </div>
                 </div>
-              </div>
-              
+              </div>              
               {/* Info */}
               <div className="p-5">
                 <h3 className="text-lg font-semibold text-gray-900">{manager.name}</h3>

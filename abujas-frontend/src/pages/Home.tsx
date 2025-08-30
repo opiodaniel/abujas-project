@@ -10,6 +10,10 @@ import { FaFacebookF, FaLinkedinIn, FaInstagram, FaWhatsapp } from "react-icons/
 import { SiTiktok } from "react-icons/si"; 
 
 export default function Home() {
+
+  const whatsappNumber = "+256791880099";
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=Hello Abujas Construction, I'd like to discuss a project.`;
+
   return (
     <section className="text-gray-900 font-sans">
       <Navbar />
@@ -267,9 +271,11 @@ export default function Home() {
 
                   {/* WhatsApp */}
                   <a
-                    href="#"
+                    href={whatsappLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center hover:bg-green-600 transition-colors duration-200"
-                    aria-label="WhatsApp"
+                    aria-label="Chat on WhatsApp"
                   >
                     <FaWhatsapp className="text-white w-5 h-5" />
                   </a>                  
