@@ -79,7 +79,7 @@ const TeamSection = () => {
     {
       id: 4,
       name: "Innocent Aryono",
-      role: "Assistant Supervisor",
+      role: "Assistant Construction Supervisor",
       image: "img_5.jpg",
       bio: "On-site lead ensuring quality, safety, and adherence to design standards.",
       details: "Innocent is our field expert, ensuring every construction phase meets safety codes, quality benchmarks, and architectural plans.",
@@ -87,7 +87,20 @@ const TeamSection = () => {
         linkedin: "#",
         twitter: "#",
         whatsapp: "#",
-      },
+      },      
+    },
+    {
+      id: 4,
+      name: "Oscar Ekwang",
+      role: "Electrical Maintenance Manager",
+      image: "img_6.jpg",
+      bio: "On-site lead ensuring quality, safety, and adherence to time management.",
+      details: "Oscar leads electrical projects by overseeing staff, managing budgets and timelines, ensuring compliance with safety and quality standards, and coordinating with teams and inspectors from planning through completion.",
+      social: {
+        linkedin: "#",
+        twitter: "#",
+        whatsapp: "#",
+      },      
     },
   ];
 
