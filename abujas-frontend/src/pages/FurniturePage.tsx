@@ -130,7 +130,6 @@ const FurniturePage = () => {
         </div>
       </section>
 
-      {/* COMPACT ABOUT STRIP - Red */}
       <div id="about" className="bg-red-800 px-6 py-4">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-4 text-center md:text-left">
           <div>
