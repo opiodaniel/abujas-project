@@ -16,7 +16,7 @@ export default function Navbar() {
   const serviceLinks = [
     { label: "Furniture Solutions", to: "/furniture" },
     { label: "Construction Works", to: "/construction" },
-    { label: "Interior Design", to: "/interior" },
+    { label: "Interior Design", to: "/interior-design" },
     { label: "Maintenance & Repairs", to: "/maintenance" },
   ];
 
