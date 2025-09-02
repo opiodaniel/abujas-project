@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X, Hammer, ChevronDown } from "lucide-react";
 import { Link } from "react-router-dom";
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -95,14 +96,7 @@ export default function Navbar() {
             className="hidden md:flex items-center gap-2 bg-red-900 text-white px-4 py-2 rounded-lg hover:bg-red-800 transition-all duration-200 shadow-sm"
             aria-label="Chat on WhatsApp"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M17.472 14.382c-.297...Z" />
-            </svg>
+            <FaWhatsapp className="h-5 w-5" />
             <span>WhatsApp Us</span>
           </a>
 
@@ -174,14 +168,7 @@ export default function Navbar() {
               className="flex items-center justify-center gap-2 w-full bg-red-900 text-white px-4 py-2 rounded-lg hover:bg-red-800"
               aria-label="Chat on WhatsApp"
             >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
-                fill="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M17.472 14.382c-.297...Z" />
-              </svg>
+              <FaWhatsapp className="h-5 w-5" />
               <span>WhatsApp Us</span>
             </a>
           </li>
