@@ -1,25 +1,5 @@
 import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
-import { useState } from 'react';
 
-// Define TypeScript interfaces
-interface SocialLinks {
-  linkedin?: string;
-  twitter?: string;
-  whatsapp?: string;
-  instagram?: string;
-  email?: string;
-  phone?: string;
-}
-
-interface Manager {
-  id: number;
-  name: string;
-  role: string;
-  image: string;
-  bio: string;
-  details: string;
-  social: SocialLinks;
-}
 
 const TeamSection = () => {
 
@@ -27,30 +7,44 @@ const TeamSection = () => {
     {
       scheme: "Project Director",
       name: "Jaspher Abulu",
-      phone: "0419 047 025",
+      phone: "782 572 384",
       email: "jaspher.abulu@abujas.com.au",
       img: "img_1.png",
     },
     {
       scheme: "Operations Manager",
       name: "Daniel Opio",
-      phone: "0407 554 800",
+      phone: "781 218 116",
       email: "daniel.opio@abujas.com.au",
       img: "img_2.png",
     },
     {
       scheme: "Construction Supervisor",
       name: "Solomon Olwa",
-      phone: "0418 388 596",
+      phone: "782 635 424",
       email: "solomon.olwa@abujas.com.au",
       img: "img_3.png",
     },
     {
       scheme: "Finance & Admin Lead",
       name: "Bosco Ceaser",
-      phone: "0457 700 590",
+      phone: "758 581 046",
       email: "bosco.ceaser@abujas.com.au",
       img: "img_4.png",
+    },
+    {
+      scheme: "Assistant Construction Supervisor",
+      name: "Innocent Aryono",
+      phone: "784 623 983",
+      email: "innocent.aryono@abujas.com.au",
+      img: "img_5.jpg",
+    },
+    {
+      scheme: "Electrical Maintenance Manager",
+      name: "Oscar Ekwang",
+      phone: "787 711 714",
+      email: "oscar.ekwang@abujas.com.au",
+      img: "img_5.jpg",
     },
   ];
 
@@ -65,47 +59,48 @@ const TeamSection = () => {
         </p>
       </div>
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
-    {managers.map((m, i) => (
-      <div
-        key={i}
-        className="relative bg-red-50 rounded-2xl shadow-lg pt-20 pb-6 px-6 mb-12"
-      >
-        {/* Profile Image */}
-        <div className="absolute -top-16 left-1/2 transform -translate-x-1/2">
-          <img
-            src={m.img}
-            alt={m.name}
-            className="w-35 h-35 rounded-full border-8 border-white shadow-lg object-cover"
-          />
-        </div>
+      <div className="flex justify-center"> 
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
+            {managers.map((m, i) => (
+              <div
+                key={i}
+                className="relative bg-red-50 rounded-2xl shadow-lg pt-20 pb-6 px-6 mb-12"
+              >
+                {/* Profile Image */}
+                <div className="absolute -top-16 left-1/2 transform -translate-x-1/2">
+                  <img
+                    src={m.img}
+                    alt={m.name}
+                    className="w-35 h-35 rounded-full border-8 border-white shadow-lg object-cover"
+                  />
+                </div>
 
-        {/* Text */}
-        <h3 className="text-xl font-bold mb-1 mt-2">{m.scheme}</h3>
-        <p className="font-medium mb-4">{m.name}</p>
+                {/* Text */}
+                <h3 className="text-xl font-bold mb-1 mt-2">{m.scheme}</h3>
+                <p className="font-medium mb-4">{m.name}</p>
 
-        <div className="space-y-2 text-sm">
-          <div className="flex items-center gap-2">
-            <PhoneIcon className="h-5 w-5 text-red-800" />
-            <a href={`tel:${m.phone}`} className="hover:underline">
-              {m.phone}
-            </a>
+                <div className="space-y-2 text-sm">
+                  <div className="flex items-center gap-2">
+                    <PhoneIcon className="h-5 w-5 text-red-800" />
+                    <a href={`tel:${m.phone}`} className="hover:underline">
+                      +256 {m.phone}
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <EnvelopeIcon className="h-5 w-5 text-red-800" />
+                    <a
+                      href={`mailto:${m.email}`}
+                      className="hover:underline break-words"
+                    >
+                      {m.email}
+                    </a>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
-          <div className="flex items-center gap-2">
-            <EnvelopeIcon className="h-5 w-5 text-red-800" />
-            <a
-              href={`mailto:${m.email}`}
-              className="hover:underline break-words"
-            >
-              {m.email}
-            </a>
-          </div>
-        </div>
       </div>
-    ))}
-  </div>
-
-  </section>
+    </section>
 
 
   );
