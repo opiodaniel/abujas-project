@@ -44,7 +44,7 @@ const TeamSection = () => {
       name: "Oscar Ekwang",
       phone: "787 711 714",
       email: "oscar.ekwang@abujas.com.au",
-      img: "img_5.jpg",
+      img: "img_6.jpg",
     },
   ];
 

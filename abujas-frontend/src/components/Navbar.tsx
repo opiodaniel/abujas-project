@@ -15,10 +15,10 @@ export default function Navbar() {
   ];
 
   const serviceLinks = [
-    { label: "Furniture Solutions", to: "/furniture" },
-    { label: "Construction Works", to: "/construction" },
-    { label: "Interior Design", to: "/interior-design" },
-    { label: "Maintenance & Repairs", to: "/maintenance" },
+    { label: "Furniture Solutions", to: "#" },
+    { label: "Construction Works", to: "#" },
+    { label: "Interior Design", to: "#" },
+    { label: "Maintenance & Repairs", to: "#" },
   ];
 
   const whatsappNumber = "+256791880099";
