@@ -105,7 +105,7 @@ const FurniturePage = () => {
                 to="/hire"
                 className="bg-white text-red-900 text-sm px-5 py-2 rounded-lg font-semibold hover:bg-red-50 transition shadow"
               >
-                Book a Carpenter
+                Book a carpenter
               </Link>
               {/* <Link
                 to="/furniture"

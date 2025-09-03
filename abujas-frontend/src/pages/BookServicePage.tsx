@@ -62,15 +62,15 @@ const BookServicePage = () => {
               Tell us about your project, and we’ll connect you with the right expert.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center md:justify-start">
-              <Link
+              {/* <Link
                 to="/hire"
                 className="bg-white text-red-900 text-sm px-5 py-2 rounded-lg font-semibold hover:bg-red-50 transition shadow"
               >
                 Book a Service
-              </Link>
+              </Link> */}
               <Link
                 to="/furniture"
-                className="bg-red-800 text-white text-sm px-5 py-2 rounded-lg font-semibold hover:bg-red-700 transition shadow"
+                className="bg-white text-red-900 text-sm px-5 py-2 rounded-lg font-semibold hover:bg-red-50 transition shadow"
               >
                 Shop Furniture
               </Link>
