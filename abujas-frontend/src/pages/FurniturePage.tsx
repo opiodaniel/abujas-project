@@ -107,12 +107,6 @@ const FurniturePage = () => {
               >
                 Book a carpenter
               </Link>
-              {/* <Link
-                to="/furniture"
-                className="bg-red-800 text-white text-sm px-5 py-2 rounded-lg font-semibold hover:bg-red-700 transition shadow"
-              >
-                Browse Furniture
-              </Link> */}
             </div>
             <p className="text-red-100 text-xs mt-3">
               Tables · Beds · Sofas · Cupboards · Desks · Custom

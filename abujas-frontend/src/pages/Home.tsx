@@ -38,14 +38,14 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
               <Link
                 to="/hire"
-                className="bg-white text-red-700 px-6 py-3 rounded-lg font-semibold hover:bg-red-50 transition shadow"
+                className="bg-white text-red-700 px-5 py-2 rounded-lg font-semibold hover:bg-red-50 transition shadow"
               >
                 Book a Service
               </Link>
 
               <Link
                 to="/furniture"
-                className="bg-red-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-800 transition shadow"
+                className="bg-red-700 text-white px-5 py-2 rounded-lg font-semibold hover:bg-red-800 transition shadow"
               >
                 Shop Furniture
               </Link>
