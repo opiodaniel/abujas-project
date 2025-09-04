@@ -308,22 +308,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Partners */}
-      <section id="partners" className="py-16 bg-red-50 px-6">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-          Our Trusted Partners
-        </h2>
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-          {[
-            "https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png",
-            "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
-            "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg",
-            "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
-          ].map((logo, idx) => (
-            <img key={idx} src={logo} alt="Partner logo" className="h-12 mx-auto grayscale hover:grayscale-0 transition" />
-          ))}
+      {/* Partners */}    
+      <section className="py-16 px-6 bg-red-50">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-10 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"> Our Trusted Partners</h2>            
+          </div>
+          {/* Features Grid */}
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-center"> */}
+          <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+            {[
+              "https://upload.wikimedia.org/wikipedia/commons/a/ab/Logo_TV_2015.png",
+              "https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg",
+              "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg",
+              "https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg",
+            ].map((logo, idx) => (
+              <img key={idx} src={logo} alt="Partner logo" className="h-12 mx-auto grayscale hover:grayscale-0 transition" />
+            ))}
+          </div>
         </div>
       </section>
+
 
       {/* FOOTER */}
       <footer className="bg-gradient-to-r from-red-900 via-red-700 to-red-600 text-white py-12 px-6">
