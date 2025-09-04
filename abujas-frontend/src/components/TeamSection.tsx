@@ -50,17 +50,19 @@ const TeamSection = () => {
 
   return (
 
-    <section id="team" className="py-5 px-6 bg-white">
-      {/* Header */}
-      <div className="max-w-5xl mx-auto text-center mb-12" data-aos="fade-up">
-        <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Leadership Team</h2>
-        <p className="text-gray-600">
-          Meet the experienced professionals leading Abujas Construction and Services Company Ltd.
-        </p>
-      </div>
+    <section className="py-20 px-6 bg-white">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-22 max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Leadership Team</h2>
+          <p className="text-gray-600 leading-relaxed">
+             Meet the experienced professionals leading Abujas Construction and Services Company Ltd.
+          </p>
+        </div>
 
-      <div className="flex justify-center"> 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
+        {/* Features Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
             {managers.map((m, i) => (
               <div
                 key={i}
@@ -98,10 +100,11 @@ const TeamSection = () => {
                 </div>
               </div>
             ))}
-          </div>
+
+
+        </div>
       </div>
     </section>
-
 
   );
 };
