@@ -178,25 +178,29 @@ export default function Home() {
 
       <RecentProjects />
 
-      {/* Testimonials */}
-      <section id="testimonials" className="bg-red-50 py-16 px-6">
-        <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
-          What Our Clients Say
-        </h2>
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8">
-          {[
-            { name: "Sarah K.", role: "Home Owner", text: "Abujas connected me with a skilled carpenter who fixed my kitchen cabinets in no time. Professional and affordable!" },
-            { name: "David M.", role: "Construction Manager", text: "Reliable electricians, always on time. I trust Abujas for all my site needs." },
-            { name: "Emily R.", role: "Property Manager", text: "The plumbing team was excellent — quick response and high-quality work. Highly recommend!" },
-          ].map((testimonial) => (
-            <div key={testimonial.name} className="bg-gray-50 shadow-md p-6 rounded-xl hover:shadow-lg transition">
-              <p className="text-gray-700 mb-4 italic">“{testimonial.text}”</p>
-              <h4 className="font-semibold text-red-700">{testimonial.name}</h4>
-              <p className="text-sm text-gray-500">{testimonial.role}</p>
-            </div>
-          ))}
+      {/* Testimonials */} 
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-12 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say;</h2>         
+          </div>
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+                { name: "Sarah K.", role: "Home Owner", text: "Abujas connected me with a skilled carpenter who fixed my kitchen cabinets in no time. Professional and affordable!" },
+                { name: "David M.", role: "Construction Manager", text: "Reliable electricians, always on time. I trust Abujas for all my site needs." },
+                { name: "Emily R.", role: "Property Manager", text: "The plumbing team was excellent — quick response and high-quality work. Highly recommend!" },
+              ].map((testimonial) => (
+                <div key={testimonial.name} className="bg-gray-50 shadow-md p-6 rounded-xl hover:shadow-lg transition">
+                  <p className="text-gray-700 mb-4 italic">“{testimonial.text}”</p>
+                  <h4 className="font-semibold text-red-700">{testimonial.name}</h4>
+                  <p className="text-sm text-gray-500">{testimonial.role}</p>
+                </div>
+              ))}
+          </div>
         </div>
-      </section>
+      </section>    
 
       <WhyChooseUs />
       <TeamSection />
