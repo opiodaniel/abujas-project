@@ -51,7 +51,6 @@ export default function ServiceSection() {
     <section className="py-16 bg-white" id="services">
       <div className="max-w-7xl mx-auto px-4 text-center">
         <h2 className="text-3xl font-bold text-gray-800 mb-8">Our Services</h2>
-
         <Swiper
           modules={[Navigation, Autoplay]}
           spaceBetween={24}
@@ -65,26 +64,23 @@ export default function ServiceSection() {
           }}
         >
           {services.map((service) => (
-
             <SwiperSlide key={service.title}>
-  <div
-    className="relative h-80 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-red-100 bg-cover bg-center"
-    style={{ backgroundImage: `url(${service.bg})` }}
-  >
-    {/* Bottom panel for text */}
-    <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-6">
-      <div className="flex items-center gap-3 mb-2">
-        <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white">
-          {service.icon}
-        </div>
-        <h3 className="text-xl font-semibold">{service.title}</h3>
-      </div>
-      <p className="text-sm opacity-90">{service.desc}</p>
-    </div>
-  </div>
-</SwiperSlide>
-
-          
+              <div
+                className="relative h-80 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border border-red-100 bg-cover bg-center"
+                style={{ backgroundImage: `url(${service.bg})` }}
+              >
+                {/* Bottom panel for text */}
+                <div className="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-6">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-12 h-12 flex items-center justify-center rounded-full bg-white">
+                      {service.icon}
+                    </div>
+                    <h3 className="text-xl font-semibold">{service.title}</h3>
+                  </div>
+                  <p className="text-sm opacity-90">{service.desc}</p>
+                </div>
+              </div>
+            </SwiperSlide>          
           ))}
         </Swiper>
       </div>

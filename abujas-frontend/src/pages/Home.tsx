@@ -149,37 +149,41 @@ export default function Home() {
       {/* Services Section */}
       <Services />
 
-      {/* How It Works */}
-      <section id="how-it-works" className="py-20 px-6 bg-red-50">
-        <div className="max-w-7xl mx-auto text-center mb-12">
-          <h2 className="text-3xl font-bold">How Abujas Works</h2>
-          <p className="text-gray-600 mt-2">
-            A simple, transparent process to get your projects done efficiently.
-          </p>
-        </div>
+      {/* How It Works */}  
+      <section className="py-16 px-6 bg-red-50">
+        <div className="max-w-7xl mx-auto">
+          {/* Section Header */}
+          <div className="text-center mb-12 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">How Abujas Works</h2>
+            <p className="text-gray-600 leading-relaxed">
+              A simple, transparent process to get your projects done efficiently.
+            </p>
+          </div>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
-          {[
-            { step: "1", title: "Select a Service", desc: "Choose from furniture, interior design, construction, or maintenance services that suit your needs." },
-            { step: "2", title: "Get Expert Consultation", desc: "Our skilled professionals provide guidance, suggest solutions, and give accurate estimates for your project." },
-            { step: "3", title: "Book & Schedule", desc: "Confirm your service, agree on milestones, and schedule appointments at your convenience." },
-            { step: "4", title: "Track & Complete", desc: "Monitor progress, communicate with professionals, and complete your project with confidence and satisfaction." },
-          ].map((item, idx) => (
-            <div key={idx} className="flex flex-col items-center bg-white rounded-xl shadow-md p-6 transform hover:scale-105 transition">
-              <div className="w-12 h-12 flex items-center justify-center bg-red-600 text-white rounded-full text-xl mb-4">
-                {item.step}
-              </div>
-              <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-              <p className="text-gray-500 text-sm text-center">{item.desc}</p>
-            </div>
-          ))}
+          {/* Features Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+                { step: "1", title: "Select a Service", desc: "Choose from furniture, interior design, construction, or maintenance services that suit your needs." },
+                { step: "2", title: "Get Expert Consultation", desc: "Our skilled professionals provide guidance, suggest solutions, and give accurate estimates for your project." },
+                { step: "3", title: "Book & Schedule", desc: "Confirm your service, agree on milestones, and schedule appointments at your convenience." },
+                { step: "4", title: "Track & Complete", desc: "Monitor progress, communicate with professionals, and complete your project with confidence and satisfaction." },
+              ].map((item, idx) => (
+                <div key={idx} className="flex flex-col items-center bg-white rounded-xl shadow-md p-6 transform hover:scale-105 transition">
+                  <div className="w-12 h-12 flex items-center justify-center bg-red-600 text-white rounded-full text-xl mb-4">
+                    {item.step}
+                  </div>
+                  <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                  <p className="text-gray-500 text-sm text-center">{item.desc}</p>
+                </div>
+              ))}
+          </div>
         </div>
       </section>
 
       <RecentProjects />
 
       {/* Testimonials */} 
-      <section className="py-20 px-6 bg-white">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12 max-w-3xl mx-auto">
