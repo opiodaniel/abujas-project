@@ -128,6 +128,7 @@ export default function Home() {
         </div>
       </div>
 
+
       {/* IMPACT / STATS */}
       <section className="bg-red-50 py-12 px-6 shadow-inner">
         <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
@@ -145,6 +146,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
 
       {/* Services Section */}
       <Services />

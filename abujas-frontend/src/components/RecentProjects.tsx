@@ -36,7 +36,7 @@ const RecentProjects = () => {
     },
     {
       id: 4,
-      title: 'Modular Kitchen & Storage Installation',
+      title: 'Cupboard Installation',
       image: '4.jpg',
       category: 'ongoing',
       description: 'L-shaped cabinetry install; hardware fitting and countertop templating currently underway.',
