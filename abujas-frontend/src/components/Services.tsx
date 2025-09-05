@@ -14,6 +14,12 @@ const services = [
     bg: "carpentry.jpg",
   },
   {
+    icon: <Ruler size={28} className="text-red-900" />,
+    title: "Interior Design",
+    desc: "Modern, functional interior designs tailored to your space and style.",
+    bg: "interior.jpg",
+  },
+  {
     icon: <Home size={28} className="text-red-900" />,
     title: "Construction",
     desc: "Professional builders for residential and commercial construction projects.",
@@ -36,12 +42,6 @@ const services = [
     title: "Plumbing",
     desc: "From leaks to full installations — trusted plumbing solutions.",
     bg: "plumbing.jpg",
-  },
-  {
-    icon: <Ruler size={28} className="text-red-900" />,
-    title: "Interior Design",
-    desc: "Modern, functional interior designs tailored to your space and style.",
-    bg: "interior.jpg",
   },
 ];
 
