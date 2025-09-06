@@ -52,7 +52,7 @@ export default function Home() {
             </div>
 
             <p className="text-red-100 text-sm mt-6">
-              Carpentry · Construction · Electrical · Plumbing · Welding · More
+              Carpentry · Interior Design . Construction · Electrical · Plumbing · More
             </p>
           </div>
 
@@ -152,7 +152,7 @@ export default function Home() {
       <Services />
 
       {/* How It Works */}  
-      <section className="py-16 px-6 bg-red-50">
+      <section className="py-16 px-6 bg-red-50" id="how-it-works">
         <div className="max-w-7xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-12 max-w-3xl mx-auto">
