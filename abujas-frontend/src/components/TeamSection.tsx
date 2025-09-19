@@ -11,12 +11,19 @@ const TeamSection = () => {
       email: "jaspher.abulu@abujas.com.au",
       img: "img_1.png",
     },
+    // {
+    //   scheme: "Operations Manager",
+    //   name: "Daniel Opio",
+    //   phone: "781 218 116",
+    //   email: "daniel.opio@abujas.com.au",
+    //   img: "img_2.png",
+    // },
     {
-      scheme: "Operations Manager",
-      name: "Daniel Opio",
+      scheme: "work shop supervisor and site engineer.",
+      name: "Walter Desmond",
       phone: "781 218 116",
-      email: "daniel.opio@abujas.com.au",
-      img: "img_2.png",
+      email: "walter.desmond@abujas.com.au",
+      img: "img_9.jpeg",
     },
     {
       scheme: "Construction Supervisor",
